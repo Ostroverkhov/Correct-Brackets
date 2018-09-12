@@ -6,7 +6,7 @@ func correctBrackets(_ string: String) -> Bool {
     for s in string {
         switch s {
             case let left where leftBracket(left):
-                stack.append(s)
+                stack.append(left)
 
             case let right where rightBracket(right):
                 guard let left = stack.last, fit(left, right)  else {
